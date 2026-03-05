@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CafeCode</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="background-color: rgb(247, 247, 247);">
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-sm bg-success navbar-dark" style="padding-left: 5%; padding-right: 5%;">
+        <!-- fixed-top : pour le fixer sur toute la page, mais dans ce cas, pas besoin -->
+        <div class="container-fluid"> <!-- Liste des éléments du header -->
+            <span class="navbar-brand" style="font-family: 'Playfair Display'"><b>☕️ CaféCode</b>
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- Liste d'élément, ms-auto permet d'aligner a droite -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="cafecode.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="la_carte.html">La carte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="reserver.html">Réserver</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+  <div class="container-fluid bg-dark text-white p-5"> <!-- div du truc noir -->
+    <h1 class="text-center" style="font-family: 'Playfair Display'; font-weight: normal;">Le café des développeurs</h1>
+    <p class="text-center" style="font-size: 75%; color: rgb(173, 173, 173);">Code, café & bonne humeur - au coeur de
+      Bordeaux</p>
+    <div class="text-center">
+      <a href="la_carte.html" class="btn btn-success btn-sm">Voir la carte</a>
+      <a href="reserver.html" class="btn btn-sm btn-outline-light">Nous trouver</a>
+    </div>
+  </div>
+
+  <div class="d-flex gap-4 justify-content-center" style="padding-top: 20px">
+    <h5><span class="badge bg-success">☕ 12 cafés au menu</span></h5>
+    <h5><span class="badge bg-success">📍 Bordeaux centre</span></h5>
+    <h5><span class="badge bg-success">⭐ 4.8/5 sur Google</span></h5>
+    <h5><span class="badge bg-success">⏱️ Ouvert 7j/7</span></h5>
+  </div>
+  <hr />
+
+  <div class="container">
+    <div class="text-center">
+      <h2 style="font-family: 'Playfair Display'; color: green">Notre carte</h2>
+      <p>Sélection de spécialités maison</p>
+    </div>
+    <div class="row justify-content-md-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-4" style="width: 350px;">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <div class="text-center">
+              <h1 class="card-title">☕</h1>
+              <h5><strong>Espresso Maison</strong></h5>
+              <p class="card-text">Notre blend exclusif, torréfié localement. Notes de chocolat noir et d'agrumes</p>
+              <div class="alert alert-success p-1 small d-inline-block">Bestseller</div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div style="color: #2b912b;"><strong>2,50 €</strong></div>
+              <a href="#" class="btn btn-success btn-sm">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4" style="width: 350px;">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <div class="text-center">
+              <h1 class="card-title">🧋</h1>
+              <h5><strong>Matcha Latte</strong></h5>
+              <p class="card-text">Matcha cérémonial du Japon, lait d'avoine bio, légèrement sucré au sirop d'agave</p>
+              <div class="alert alert-warning p-1 small d-inline-block">Nouveau</div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div style="color: #2b912b;"><strong>4,20 €</strong></div>
+              <a href="#" class="btn btn-success btn-sm">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4" style="width: 350px;">
+        <div class="card h-100 border-0 shadow">
+          <div class="card-body">
+            <div class="text-center">
+              <h1 class="card-title">🍵</h1>
+              <h5><strong>Cold Brew</strong></h5>
+              <p class="card-text">Infusion à froid 18h, servi sur glaçons. Doux, peu acide, très rafraîchissant</p>
+              <div class="alert alert-info p-1 small d-inline-block">Saisonnier</div>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <div style="color: #2b912b;"><strong>3,80 €</strong></div>
+              <a href="#" class="btn btn-success btn-sm">Commander</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Horaires -->
+        <div class="col-md-6">
+          <h4 class="mb-4">
+            <p style="font-family: 'Playfair Display'"><i class="bi bi-clock me-2"></i></i>Horaires</p>
+
+          </h4>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Lundi – Vendredi</span>
+              <strong>8h – 20h</strong>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Samedi</span>
+              <strong>9h – 21h</strong>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Dimanche</span>
+              <strong>10h – 18h</strong>
+            </li>
+          </ul>
+
+          <div class="alert alert-success mt-4 d-flex align-items-center">
+            <i class="bi bi-check-circle me-2"></i>
+            <div>
+              <strong>Actuellement ouvert</strong> — fermeture à 20h.
+            </div>
+          </div>
+        </div>
+
+        <!-- Nous trouver -->
+        <div class="col-md-6">
+          <h4 class="mb-4">
+            <p style="font-family: 'Playfair Display'"><i class="bi bi-geo-alt me-2 "></i>Nous trouver</p>
+          </h4>
+
+          <p style="color: grey;"></p><i class="bi bi-pin-map me-2"></i></i>12 rue des Capucins, 33000 Bordeaux</p>
+
+          <h5 class="mt-4">Une question ?</h5>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Votre nom</label>
+              <input type="text" class="form-control" placeholder="ex. Marie Dupont">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Message</label>
+              <textarea class="form-control" rows="4" placeholder="Votre message..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">
+              <i class="bi bi-send me-2"></i>
+              Envoyer
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </div>
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+      <h5 class="mb-2">☕️ CaféCode</h5>
+      <p class="mb-1">
+        12 rue des Capucins - Bordeaux - 05 56 00 00 00
+      </p>
+
+      <div class="mb-3">
+        <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-light"><i class="bi bi-twitter-x"></i></a>
+      </div>
+
+      <small>© 2026 CaféCode. Tous droits réservés.</small>
+    </div>
+  </footer>
+
+  <!-- Liste des émoticones : -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</body>
+
+</html>
