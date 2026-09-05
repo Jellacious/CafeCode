@@ -13,9 +13,10 @@
   <link href="style.css" rel="stylesheet">
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="theme.js"></script>
 </head>
 
-<body style="background-color: rgb(247, 247, 247);">
+<body>
   <!-- Barre de navigation -->
   <nav class="navbar navbar-expand-sm bg-success navbar-dark" style="padding-left: 5%; padding-right: 5%;">
     <!-- fixed-top : pour le fixer sur toute la page, mais dans ce cas, pas besoin -->
@@ -40,7 +41,13 @@
           <li class="nav-item">
             <a class="nav-link " href="reserver.html">Réserver</a>
           </li>
-        </ul>
+        
+                <li class="nav-item ms-sm-2 d-flex align-items-center">
+                        <button class="btn btn-light btn-sm rounded-pill px-3 fw-semibold shadow-sm theme-toggle-btn" type="button">
+                            <span class="theme-text">🌙 Mode Sombre</span>
+                        </button>
+                    </li>
+                </ul>
       </div>
     </div>
   </nav>
