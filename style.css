@@ -1,14 +1,10 @@
 /* --- Variables & Base --- */
-html {
-    background-color: #198754;
-}
-
 body {
     background-color: var(--bs-body-bg, #f7f7f7);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Thème Sombre d'origine */
+/* Thème Sombre automatique */
 [data-bs-theme="dark"] {
     --bs-body-bg: #121820;
     --bs-body-color: #e5e7eb;
@@ -63,31 +59,4 @@ body {
 [data-bs-theme="dark"] hr {
     border-color: #2a3442 !important;
     opacity: 0.5;
-}
-
-
-
-/* Style dynamique du bouton Dark Mode */
-.theme-toggle-btn {
-    background-color: #f1f5f9 !important; /* Blanc grisé */
-    color: #334155 !important;           /* Texte gris anthracite */
-    border: 1px solid #cbd5e1 !important;
-    transition: all 0.2s ease !important;
-}
-
-.theme-toggle-btn:hover {
-    background-color: #e2e8f0 !important;
-    color: #0f172a !important;
-}
-
-/* En mode sombre : Noir grisé */
-[data-bs-theme="dark"] .theme-toggle-btn {
-    background-color: #1e293b !important; /* Noir/ardoise grisé */
-    color: #f8fafc !important;           /* Texte blanc cassé */
-    border: 1px solid #334155 !important;
-}
-
-[data-bs-theme="dark"] .theme-toggle-btn:hover {
-    background-color: #334155 !important;
-    color: #ffffff !important;
 }

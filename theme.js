@@ -1,29 +1,11 @@
-// --- Gestion du Dark Mode pour CaféCode (Lien Texte) ---
-function applyTheme(theme) {
-    document.documentElement.setAttribute('data-bs-theme', theme);
-    localStorage.setItem('cafecode-theme', theme);
-    
-    // Mettre à jour le texte du bouton
-    const textElements = document.querySelectorAll('.theme-text');
-    textElements.forEach(el => {
-        el.textContent = theme === 'dark' ? '☀️ Mode Clair' : '🌙 Mode Sombre';
-    });
+// --- Gestion automatique du thème selon l'appareil ---
+function applyDeviceTheme() {
+    const isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-bs-theme', isDark ? 'dark' : 'light');
 }
 
-// Initialisation immédiate
-const savedTheme = localStorage.getItem('cafecode-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-applyTheme(savedTheme);
+applyDeviceTheme();
 
-// Attacher l'événement au chargement du DOM
-document.addEventListener('DOMContentLoaded', () => {
-    applyTheme(savedTheme);
-    const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-    toggleBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const current = document.documentElement.getAttribute('data-bs-theme') || 'light';
-            const next = current === 'light' ? 'dark' : 'light';
-            applyTheme(next);
-        });
-    });
-});
+if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyDeviceTheme);
+}
